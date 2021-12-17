@@ -37,6 +37,47 @@ $('head').terminal({
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
+	        <style>
+        #chatLog{text-align: center;}
+        h2 {text-align: center;}
+    </style>
+    <script>
+        var know = {
+            "hello":"Hi",
+            "how are you?":"Good",
+            "john":"hi john"
+            // You Can Add More Stuff Here - It is customizable. - you can add more than 3 
+        };
+        function talk() {
+             var user =document.getElementById("userBox") .value;
+             document.getElementById("chatLog").innerHTML +=user+"<br>";
+            if(user in know){
+                document.getElementById("chatLog").innerHTML += know[user]+"<br>";
+            } else{
+                document.getElementById("chatLog").innerHTML+="I am not a genius , ask me something that I know!<br>";}}
+    </script><h1 id="chatLog"> <br> 
+
+<style>
+        
+        h1 { 
+                color:black;
+            
+            div.scroll
+                margin:4px, 4px;
+                padding:4px;
+                background-color: ivory;
+                width: 500px;
+                height: 175px;
+                overflow: scroll;
+                text-align:center;
+                
+            }
+            
+             </style> </h1>
+<h2>
+<div style="text-align: center;"><input id="userBox" type="text" onkeydown="if(event.keyCode == 13){talk()}"></div></h2>
+<h3 style="text-align: center;">Hello I Am CJ<br>
+Ask me some questions!</h3>
 
 
         <div class="site-main" id="sTop">
